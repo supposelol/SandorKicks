@@ -1,0 +1,455 @@
+/* AllShoeProducts + AllAccessories */
+.item-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 217.77px;
+    margin-left: 16px
+}
+
+.item-price,
+.item-description {
+    margin-left: 24px;
+}
+
+.item-brand {
+    text-transform: uppercase;
+    font-size: 13px;
+    opacity: 0.7;
+    margin-left: 24px;
+}
+
+.item-description,
+.detail-description,
+.brand-name {
+    text-transform: capitalize;
+}
+
+h5 {
+    padding-top: 32px;
+    padding-bottom: 4px;
+}
+
+.search-bar-products {
+    width: 100%;
+    margin: 8px 0 16px;
+    padding: 8px 24px;
+    background-color: #fbfbfb;
+    border: 1px solid rgba(34, 34, 34, .2);
+    border-radius: 50px;
+}
+
+.brand-filter,
+.price-range-filter {
+    margin-left: 12px;
+}
+
+.brand-filter {
+    position: relative;
+}
+
+.brand-filter::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 12;
+    width: 90%;
+    height: 1px;
+    background-color: #191919;
+    opacity: 0.2;
+}
+
+.left-div-filters {
+    border-right: 1px solid rgba(25, 25, 25, 0.2);
+    padding-bottom: 24px;
+}
+
+.right-div-items {
+    padding-top: 24px;
+}
+
+/* checkbox styles */
+ul {
+    list-style-type: none;
+    padding: 0 !important;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.05em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: inline-block;
+    vertical-align: middle;
+    /* Vertically align with text */
+    position: relative;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #fff;
+}
+
+input[type="checkbox"]::before {
+    content: '\2713';
+    /* Checkmark character */
+    font-size: 1.1em;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked::before {
+    opacity: 1;
+}
+
+/* notify msg */
+.notify {
+    color: white;
+    background-color: #373737;
+    padding: 8px 12px;
+    border-radius: 2px;
+    border: #191919 1px solid;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%);
+    top: -100%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notify.slide-in {
+    animation-duration: 4s;
+    animation-delay: -1s;
+    animation-name: slidein;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+.notify-text {
+    margin: 0px !important;
+}
+
+@keyframes slidein {
+    0% {
+        top: 85%;
+    }
+
+    40% {
+        top: 100%;
+    }
+
+    60% {
+        top: 100%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+/* price slider styles */
+.values {
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.slider {
+    width: 90%;
+    height: 1.75px;
+    background-color: #191919;
+    margin-top: 16px;
+}
+
+.thumb {
+    margin-top: -8px;
+    width: 20px;
+    height: 20px;
+    cursor: grab;
+    background: #f2f2f2;
+    border-radius: 50%;
+    border: 1px solid #191919;
+}
+
+/* Shoe details css */
+.select-size-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 6px;
+}
+
+.select-size,
+.size-guide {
+    margin: 0;
+}
+
+.size-guide {
+    margin-right: 6px;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.size-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.size_button {
+    flex: 1 0 45%;
+    /* Equal width for two buttons in a row */
+    margin: 4px 6px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #191919;
+    transition: background-color 0.3s ease;
+}
+
+.select-size-alert {
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.size-error {
+    border-color: red;
+}
+
+.add-to-cart_button {
+    width: 98%;
+    margin: 4px;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #191919;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.size_button:hover {
+    background-color: transparent;
+    border-color: #191919;
+}
+
+.add-to-cart_button:hover {
+    background-color: #555555;
+}
+
+.size_button.clicked {
+    border-color: #191919;
+}
+
+.middle-col {
+    padding-right: 8px;
+}
+
+.detail-price,
+.detail-brand,
+.detail-description {
+    margin-left: 6px;
+}
+
+.detail-brand {
+    text-transform: uppercase;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* sizeModal styles */
+.shoe-size-table {
+    margin: 0 auto;
+}
+
+.shoe-size-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.shoe-size-table th,
+.shoe-size-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.shoe-size-table th {
+    background-color: #f2f2f2;
+    color: #191919;
+}
+
+.shoe-size-table td {
+    background-color: white;
+    color: #191919;
+}
+
+.sizemodaloverlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.sizemodal {
+    overflow: 'hidden' !important;
+    display: block;
+    max-width: 100% !important;
+    position: absolute !important;
+    top: 4%;
+    left: 10%;
+    right: 10%;
+    bottom: 4%;
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    padding: 20px !important;
+}
+
+.modal-close-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.modal-close-button {
+    background-color: #191919;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.modal-close-button:hover {
+    background-color: #555555;
+}
+
+.enlarged-image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+/* item info styles last col*/
+.item-info-container {
+    padding: 24px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+.item-info-container p {
+    margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 992px) {
+    .sizemodal {
+        top: 2%;
+        bottom: 2%;
+        right: 3%;
+        left: 3%;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .left-side-filters {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .left-div-filters {
+        border-right: none;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .values {
+        margin: 0;
+    }
+
+    .item-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item-image {
+        margin: 0;
+    }
+
+    .brand-filter::after {
+        width: 100%;
+    }
+
+    .detail-description,
+    .detail-price,
+    .detail-brand {
+        margin-left: 24px
+    }
+
+    .select-size {
+        margin-left: 18px;
+    }
+
+    .size-guide {
+        margin-right: 24px;
+    }
+
+    /* @keyframes slidein {
+        0% {
+            top: 132%;
+        }
+
+        40% {
+            top: 137%;
+        }
+
+        60% {
+            top: 137%;
+        }
+
+        100% {
+            top: 142%;
+        }
+    } */
+}

@@ -1,0 +1,127 @@
+.order-summary-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-confirmation-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.items-ordered-text {
+    margin: 4px 0px !important;
+}
+
+.order-details {
+    width: 100%;
+}
+
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px 10px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.order-summary h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.order-summary p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.order-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.order-items .cart-item-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.order-items .cart-item-image {
+    width: 157.17px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.order-items .cart-item-info {
+    margin-right: 20px;
+}
+
+.order-items .cart-item-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.order-items .cart-item-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.order-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.actions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-actions button {
+    background-color: #FFD700;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.order-actions button:hover {
+    background-color: #FFC400;
+}
+
+.order-actions a {
+    color: rgba(51, 51, 51, 0.7);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .order-items .cart-item-image {
+        display: none;
+    }
+
+    .order-sum-lottie-container>div {
+        height: 100px !important;
+        width: 200px !important;
+    }
+}

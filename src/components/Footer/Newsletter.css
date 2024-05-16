@@ -1,0 +1,65 @@
+.news {
+    background-color: #191919;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.news h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 1rem;
+}
+
+.news-text {
+    text-align: center;
+}
+
+.news input {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+input {
+    border-radius: 5px;
+}
+
+.news .sub-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sub-button {
+    background-color: #ff6f4a;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65e36;
+}
+
+@media (max-width: 400px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .news input {
+        margin-right: 0;
+        text-align: center;
+    }
+}

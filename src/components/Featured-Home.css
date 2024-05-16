@@ -1,0 +1,341 @@
+/* featured styles */
+.animated-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.35) 20%,
+            rgba(0, 0, 0, 0.25) 40%,
+            rgba(0, 0, 0, 0.15) 80%,
+            rgba(0, 0, 0, 0.05) 100%);
+}
+
+.title1 {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: #ff6f4a;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 2px black;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title2 {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: #ff6f4a;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 2px #333333;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Trending Slider Styles */
+
+.slick-dots {
+    top: 280px;
+}
+
+.slider-div-container {
+    position: relative;
+    height: 300px;
+}
+
+.slick-slide img {
+    max-width: 100%;
+    height: auto;
+    max-height: 217.77px;
+    padding: 6px;
+}
+
+.slider-text-div {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-brand {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.slider-price {
+    margin-top: -12px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+/* HomeBox-HomeLaces styles */
+.home-box-div-img {
+    position: relative;
+    overflow: hidden;
+}
+
+#home-box-title {
+    margin-top: 36px;
+}
+
+.home-box-div-text {
+    padding: 0 80px;
+}
+
+.home-box-div-text p {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.home-buy-button {
+    padding: 10px 20px;
+    margin-right: 100px;
+    background-color: #191919;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-buy-button2 {
+    padding: 10px 20px;
+    margin-right: 100px;
+    margin-bottom: 36px;
+    background-color: #191919;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-buy-button:hover,
+.home-buy-button2:hover {
+    background-color: #555555;
+}
+
+/* ShoeFlexSlider styles */
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    padding: 20px 20px 48px;
+    /* top, right+left, bottom */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 568px;
+    border: 0.5px solid #555555;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ShoeFlexSliderDetails / Modal styles */
+/* Style for the modal overlay */
+.ReactModal__Overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    z-index: 1;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+
+/* Style for the modal content */
+.ReactModal__Content {
+    position: static !important;
+    max-width: 70%;
+    max-height: auto;
+    border-radius: 10px 0 0 10px;
+    background: #191919;
+    padding: 0px !important;
+    border: 0.5px solid #555555;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-img {
+    width: 100%;
+    height: 100%;
+    border-right: 1.5px solid #191919;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+
+.image-modal-content {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Style for the close button */
+.m-close-button {
+    background-color: #f5f5f5;
+    color: #191919;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.m-close-button:hover {
+    background-color: #F0F0F0;
+}
+
+.m-close-button-container {
+    position: relative;
+}
+
+/* Right div for item details */
+.modal-right-div {
+    padding: 36px !important;
+}
+
+.m-item-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 197.77px;
+    padding-top: 32px;
+    cursor: pointer;
+}
+
+/* .m-item-price,
+.m-item-description,
+.m-item-brand {
+    margin-left: 32px;
+} */
+
+.m-item-brand {
+    text-transform: uppercase;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.m-item-description {
+    text-transform: capitalize;
+}
+
+.m-item-longtext {
+    margin-top: 32px;
+    margin-right: 8px;
+    text-justify: inter-word;
+}
+
+h5 {
+    padding-bottom: 4px;
+}
+
+/* trending slider responsive */
+@media (max-width: 992px) {
+    .slick-dots {
+        top: 240px;
+    }
+
+    .slider-div-container {
+        position: relative;
+        height: 260px;
+    }
+
+    .m-close-button {
+        font-size: 18px;
+        width: 5px;
+        height: 5px;
+        top: 20px;
+        right: 15px;
+        background-color: #f5f5f5;
+        color: #191919;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 28px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        position: absolute;
+    }
+
+    .ReactModal__Content {
+        max-width: 95%;
+    }
+
+    .m-item-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .m-item-image {
+        padding-top: 16px
+    }
+}
+
+@media (max-width: 576px) {
+    .slick-dots {
+        top: 220px;
+    }
+
+    .slider-div-container {
+        position: relative;
+        height: 240px;
+    }
+
+    .swiper-slide {
+        padding: 8px;
+    }
+
+    .m-close-button {
+        right: -5px;
+        top: -5px;
+    }
+}

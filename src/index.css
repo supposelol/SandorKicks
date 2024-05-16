@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Generic styles */
+h3 {
+  text-align: center;
+  color: #333333;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.motto {
+  background-color: #f2f2f2;
+  padding: 36px 0px;
+  margin-bottom: 28px;
+}
+
+.motto2 {
+  background-color: #f2f2f2;
+  padding: 36px 0px;
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
