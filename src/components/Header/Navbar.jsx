@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../Profile/auth";
 import { useSpring, animated } from "react-spring";
@@ -6,12 +6,14 @@ import { ShoesDropdown } from "./ShoesDropdown";
 import { Logout } from "../Profile/Logout";
 import logo from "../../assets/gif/logo.gif";
 import { SearchModal } from "./SearchModal";
+import { CartContext } from "../Cart/CartContext";
 import "./Navbar.css";
 
 export const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const auth = useAuth();
+  const { getTotalItems } = useContext(CartContext); // Use the getTotalItems method from CartContext
   const menuAnimation = useSpring({
     opacity: openMenu ? 1 : 0,
     config: { duration: 300 },
@@ -24,12 +26,11 @@ export const Navbar = () => {
   const closeSearchModal = () => {
     setIsSearchModalOpen(false);
   };
-  //logic to make the mobile menu disappear when clicked outside
+
   const menuRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      //check if the click is outside of the menu
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setOpenMenu(false);
       }
@@ -37,7 +38,6 @@ export const Navbar = () => {
     document.body.addEventListener("click", handleClickOutside);
 
     return () => {
-      //remove the event listener when the component unmounts
       document.body.removeEventListener("click", handleClickOutside);
     };
   }, []);
@@ -66,14 +66,13 @@ export const Navbar = () => {
         <NavLink to="/cart">
           <span className="nav_text_cart">
             <i className="fa fa-shopping-cart" aria-hidden="true" />
+            {getTotalItems() > 0 && <span className="cart-count">{getTotalItems()}</span>}
           </span>
         </NavLink>
         {!auth.user ? (
           <NavLink to="/login" className="login_button">
             <i className="fa fa-sign-in" aria-hidden="true" />
-            <span className="login_button_text">
-              Login
-            </span>
+            <span className="login_button_text">Login</span>
           </NavLink>
         ) : (
           <Logout />
@@ -87,15 +86,12 @@ export const Navbar = () => {
       </div>
 
       {openMenu && (
-        <animated.ul
-          className="mobile-menu"
-          style={menuAnimation}
-        >
+        <animated.ul className="mobile-menu" style={menuAnimation}>
           <ShoesDropdown />
           <NavLink to="/accessories">
             <span className="nav_text">Accessories</span>
           </NavLink>
-          <span className="nav_text">Search</span>
+          <span className="nav_text" onClick={openSearchModal}>Search</span>
           <NavLink to="/profile">
             <span className="nav_text">Profile</span>
           </NavLink>

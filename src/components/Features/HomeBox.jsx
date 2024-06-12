@@ -10,7 +10,7 @@ const Homebox = () => {
     const navigate = useNavigate();
 
     const boxAnimation = useSpring({
-        transform: `scale(${hovered ? 1.03 : 1}) rotate(${hovered ? -3 : 0}deg)`,
+        transform: `scale(${hovered ? 1.03 : 1}) rotate(${hovered ? -1 : 0}deg)`,
     });
 
     return (

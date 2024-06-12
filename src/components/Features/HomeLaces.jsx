@@ -10,7 +10,7 @@ const Homelaces = () => {
     const navigate = useNavigate();
 
     const laceAnimation = useSpring({
-        transform: `scale(${hovered ? 1.03 : 1}) rotate(${hovered ? 3 : 0}deg)`,
+        transform: `scale(${hovered ? 1.03 : 1}) rotate(${hovered ? 1 : 0}deg)`,
     });
 
     return (

@@ -25,7 +25,7 @@ const OrderSummary = () => {
         <>
             <div className="motto"><h3>Order Summary</h3></div>
             <div className="order-summary-container">
-                <h4 className="order-confirmation-text">Thank you, your order has been placed   </h4>
+                <h4 className="order-confirmation-text">Thank you, your order has been placed.</h4>
                 <div className="order-details">
                     {cartItems && (
                         <>
