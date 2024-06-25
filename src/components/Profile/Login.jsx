@@ -27,6 +27,7 @@ export const Login = () => {
             <div className="motto"><h3>Login</h3></div>
             <div className="login-container">
                 <div className="login-form">
+                    <p>Log in with whatever, this part is not finished yet.</p>
                     <label>
                         Username:{" "}
                         <input
