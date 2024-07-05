@@ -11,7 +11,11 @@ SandorKicks is a modern shoe e-commerce shop built with React.
 
 ## Screenshots
 ![Home Page](./src/assets/img/readme/home.png)
+
 ![Kicks Page](./src/assets/img/readme/kicks.png)
-![Search](./src/assets/img/readme/search.png)
-![Details](./src/assets/img/readme/infoModal.png)
+
 ![Cart](./src/assets/img/readme/cart.png)
+
+![Search](./src/assets/img/readme/search.png)
+
+![Details](./src/assets/img/readme/infoModal.png)
