@@ -56,22 +56,22 @@ export const Navbar = () => {
           <span className="nav_text">Accessories</span>
         </NavLink>
         <span className="nav_text_search" onClick={openSearchModal}>
-          <i className="fa fa-search" aria-hidden="true"></i>
+          <i className="fa fa-search margin-right" aria-hidden="true"></i>
         </span>
         <NavLink to="/profile">
           <span className="nav_text_profile">
-            <i className="fa fa-user" aria-hidden="true"></i>
+            <i className="fa fa-user margin-right" aria-hidden="true"></i>
           </span>
         </NavLink>
         <NavLink to="/cart">
           <span className="nav_text_cart">
-            <i className="fa fa-shopping-cart" aria-hidden="true" />
+            <i className="fa fa-shopping-cart margin-right" aria-hidden="true" />
             {getTotalItems() > 0 && <span className="cart-count">{getTotalItems()}</span>}
           </span>
         </NavLink>
         {!auth.user ? (
           <NavLink to="/login" className="login_button">
-            <i className="fa fa-sign-in" aria-hidden="true" />
+            <i className="fa fa-sign-in margin-right" aria-hidden="true" />
             <span className="login_button_text">Login</span>
           </NavLink>
         ) : (

@@ -113,24 +113,79 @@
 }
 
 /* ShoeFlexSlider styles */
+.swiper-container {
+
+    padding-right: 64px;
+    padding-left: 64px;
+}
+
 .swiper-wrapper {
     display: flex;
     align-items: center;
 }
 
 .swiper-slide {
-    padding: 20px 20px 48px;
+    padding: 20px 0px 48px;
     /* top, right+left, bottom */
 }
 
-.swiper-slide img {
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.zoom-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    margin-right: 0 !important;
+}
+
+.zoom-icon:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     max-height: 568px;
-    border: 0.5px solid #555555;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    border-radius: 5px;
+    /* Match the border-radius of the image */
+}
+
+.image-container:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-next {
+    color: black;
 }
 
 /* ShoeFlexSliderDetails / Modal styles */
@@ -155,6 +210,33 @@
 
 .ReactModal__Body--open {
     overflow: hidden;
+}
+
+.flex-text-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-nav-buttons {
+    align-self: flex-end;
+    padding-right: 24px;
+    padding-bottom: 18px;
+}
+
+.swiper-nav-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #191919;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-nav-buttons button:hover {
+    background-color: #555555;
 }
 
 /* Style for the modal content */
@@ -217,6 +299,26 @@
 
 .m-close-button-container {
     position: relative;
+}
+
+/* upload btn */
+
+
+.upload-button {
+    margin-bottom: 18px;
+    padding: 8px 22px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #191919;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #555555;
 }
 
 /* Right div for item details */
