@@ -31,9 +31,16 @@ function Trending() {
         infinite: true,
         dots: true,
         arrows: false,
-        slidesToShow: 4,
+        slidesToShow: 5,
         swipeToSlide: true,
         responsive: [
+            {
+                breakpoint: 1441,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
             {
                 breakpoint: 1200,
                 settings: {
