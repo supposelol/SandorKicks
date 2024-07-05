@@ -100,7 +100,7 @@ export const Navbar = () => {
           </NavLink>
           {!auth.user ? (
             <NavLink to="/login" className="login_button">
-              <i className="fa fa-sign-in" aria-hidden="true" />
+              <i className="fa fa-sign-in margin-right" aria-hidden="true" />
               <span className="login_button_text">Login</span>
             </NavLink>
           ) : (

@@ -12,6 +12,7 @@ const ShoeFlexSlider = () => {
     const swiperRef = useRef(null);
     const [flexItems, setFlexItems] = useState([]);
     const [shuffledFlexItems, setShuffledFlexItems] = useState([]);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
         // useRef to use useEffect only once
@@ -60,18 +61,36 @@ const ShoeFlexSlider = () => {
         setModalOpen(false);
     };
 
+    // screen size effect
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 404);
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <>
             <div className='swiper-container'>
                 <div className="flex-text-buttons-wrapper">
-                    <div className="flex-text-container">
+                    <div className="flex-text-content">
                         <h4>Style inspiration for your new kicks!</h4>
                         <p>Upload your photo for a chance to be featured</p>
-                        <button className='upload-button'>Upload your photo</button>
                     </div>
-                    <div className="swiper-nav-buttons">
-                        <button onClick={handlePrev}><i className="fa-solid fa-chevron-left"></i></button>
-                        <button onClick={handleNext}><i className="fa-solid fa-chevron-right"></i></button>
+                    <div className="flex-buttons-container">
+                        <button className='upload-button'>
+                            {isSmallScreen ? 'Upload' : 'Upload your photo'}
+                        </button>
+                        <div className="swiper-nav-buttons">
+                            <button onClick={handlePrev}><i className="fa-solid fa-chevron-left"></i></button>
+                            <button onClick={handleNext}><i className="fa-solid fa-chevron-right"></i></button>
+                        </div>
                     </div>
                 </div>
                 <Swiper

@@ -177,7 +177,6 @@
     background: rgba(0, 0, 0, 0);
     transition: background 0.3s ease;
     border-radius: 5px;
-    /* Match the border-radius of the image */
 }
 
 .image-container:hover::before {
@@ -186,6 +185,86 @@
 
 .swiper-button-next {
     color: black;
+}
+
+/* upload btn */
+.upload-button {
+    margin-bottom: 18px;
+    padding: 8px 22px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #191919;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #555555;
+}
+
+.flex-text-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-nav-buttons {
+    padding-right: 24px;
+    padding-bottom: 18px;
+}
+
+.swiper-nav-buttons button {
+    margin: 0 8px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #191919;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-nav-buttons button:hover {
+    background-color: #555555;
+}
+
+@media (max-width: 768px) {
+
+    .flex-text-content {
+        padding-bottom: 12px;
+    }
+
+    .swiper-nav-buttons {
+        padding-right: 0;
+    }
+
+    .swiper-nav-buttons button {
+        margin: 0 4px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 404px) {
+    .upload-button::after {
+        content: '';
+        /* Change text content here */
+        visibility: visible;
+        /* Ensure it's visible */
+    }
+
+    .upload-button span {
+        display: none;
+        /* Hide the full text */
+    }
 }
 
 /* ShoeFlexSliderDetails / Modal styles */
@@ -210,33 +289,6 @@
 
 .ReactModal__Body--open {
     overflow: hidden;
-}
-
-.flex-text-buttons-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.swiper-nav-buttons {
-    align-self: flex-end;
-    padding-right: 24px;
-    padding-bottom: 18px;
-}
-
-.swiper-nav-buttons button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color: #191919;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.swiper-nav-buttons button:hover {
-    background-color: #555555;
 }
 
 /* Style for the modal content */
@@ -299,26 +351,6 @@
 
 .m-close-button-container {
     position: relative;
-}
-
-/* upload btn */
-
-
-.upload-button {
-    margin-bottom: 18px;
-    padding: 8px 22px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50px;
-    text-align: center;
-    background-color: #191919;
-    color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-.upload-button:hover {
-    background-color: #555555;
 }
 
 /* Right div for item details */
@@ -402,6 +434,14 @@ h5 {
 }
 
 @media (max-width: 576px) {
+    .image-modal-content {
+        display: flex;
+    }
+
+    .modal-img {
+        display: none;
+    }
+
     .slick-dots {
         top: 220px;
     }
