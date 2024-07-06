@@ -301,6 +301,10 @@ header {
 }
 
 @media only screen and (max-width: 875px) {
+    header {
+        padding: 0 32px;
+    }
+
     .search-modal {
         width: 66%;
     }
