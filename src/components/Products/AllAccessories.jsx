@@ -115,6 +115,7 @@ const AllAccessories = () => {
                         {filteredItems.map((item) => (
                             <Col key={item.id} xs="12" sm="6" md="4">
                                 <div
+                                    className="item-container"
                                     onMouseEnter={() => setHoveredItem(item.id)}
                                     onMouseLeave={() => setHoveredItem(null)}
                                     onClick={() => accessoryClick(item)}
