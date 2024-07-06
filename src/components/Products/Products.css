@@ -143,19 +143,19 @@ input[type="checkbox"]:checked::before {
 
 @keyframes slidein {
     0% {
-        top: 85%;
+        top: 70%;
     }
 
     40% {
-        top: 100%;
+        top: 75%;
     }
 
     60% {
-        top: 100%;
+        top: 75%;
     }
 
     100% {
-        top: 110%;
+        top: 80%;
     }
 }
 
@@ -434,22 +434,4 @@ input[type="checkbox"]:checked::before {
     .size-guide {
         margin-right: 24px;
     }
-
-    /* @keyframes slidein {
-        0% {
-            top: 132%;
-        }
-
-        40% {
-            top: 137%;
-        }
-
-        60% {
-            top: 137%;
-        }
-
-        100% {
-            top: 142%;
-        }
-    } */
 }

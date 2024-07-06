@@ -62,6 +62,7 @@ const AccessoryDetails = () => {
             setNotify(false);
         }, 4000);
     };
+
     const handleAddToCart = () => {
         if (selectedSize) {
             const cartItem = {
@@ -79,6 +80,7 @@ const AccessoryDetails = () => {
             setShowSizeError(true);
         }
     };
+
     return (
         <>
             <div
